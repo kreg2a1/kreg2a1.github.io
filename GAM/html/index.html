@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Игра: Угадай число</h1>
+        <p>Я загадал число от 1 до 100. Попробуй угадать!</p>
+        <input type="number" id="userInput" placeholder="Введите число" min="1" max="100">
+        <button id="guessButton">Угадать</button>
+        <button id="resetButton">Начать заново</button>
+
+        <p id="resultMessage"></p>
+        <p id="attemptsMessage">Количество попыток: 0</p>
+    </div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

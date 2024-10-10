@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Тест на знание языка Python</h1>
+    <table border="1" id="q1" class="question">
+        <tr>
+            <td rowspan="3">1</td>
+            <td colspan="4" class="task">
+                Какой тип данных возвращает функция input() в Python?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) int</td>
+            <td class="variant">2) float</td>
+            <td class="variant">3) str</td>
+            <td class="variant">4) bool</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a1" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q2" class="question">
+        <tr>
+            <td rowspan="3">2</td>
+            <td colspan="4" class="task">
+                Какое ключевое слово используется для определения функции в Python?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1)  function</td>
+            <td class="variant">2) def</td>
+            <td class="variant">3) lambda</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a2" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+    <table border="1" id="q3" class="question">
+        <tr>
+            <td rowspan="3">3</td>
+            <td colspan="4" class="task">
+                Что произойдет при выполнении следующего кода: print(type(5.0))?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) class 'int'</class> </td>
+            <td class="variant">2) class 'decimal'</td>
+            <td class="variant">3) class 'float'</td>
+            <td class="variant">4) class 'double'</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a3" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q4" class="question">
+        <tr>
+            <td rowspan="3">4</td>
+            <td colspan="4" class="task">
+                Какой из следующих операторов используется для сравнения равенства в Python?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) !=</td>
+            <td class="variant">2) :=</td>
+            <td class="variant">3) =</td>
+            <td class="variant">4) ==)</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a4" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q5" class="question">
+        <tr>
+            <td rowspan="3">5</td>
+            <td colspan="4" class="task">
+                Что выведет следующий код: print(2 ** 3)?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) 5</td>
+            <td class="variant">2) 6</td>
+            <td class="variant">3) 8</td>
+            <td class="variant">4) 7</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a5" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+    <script>
+        function Check() {
+            let q1 = document.getElementById('q1');
+            let a1 = document.getElementById('a1');
+            let count = 0;
+
+            if (a1.value == '3') {
+                q1.style.border = '1px solid green ';
+                document.getElementById('a1').disabled = true;
+                count++;
+            }else {
+                q1.style.border = '1px solid red';
+                document.getElementById('a1').disabled = true;
+            }
+
+            if(a2.value == '2'){
+                q2.style.border = '1px solid green ';
+                document.getElementById('a2').disabled = true;
+                count++;
+            }else {
+                q2.style.border = '1px solid red';
+                document.getElementById('a2').disabled = true;
+            }
+
+            if(a3.value == '3'){
+                q3.style.border = '1px solid green ';
+                document.getElementById('a3').disabled = true;
+                count++;
+            }else {
+                q3.style.border = '1px solid red';
+                document.getElementById('a3').disabled = true;
+            }
+
+            if(a4.value == '4'){
+                q4.style.border = '1px solid green ';
+                document.getElementById('a4').disabled = true;
+                count++;
+            }else {
+                q4.style.border = '1px solid red';
+                document.getElementById('a4').disabled = true;
+            }
+
+            if(a5.value == '3'){
+                q5.style.border = '1px solid green ';
+                document.getElementById('a5').disabled = true;
+                count++;
+            }else {
+                q5.style.border = '1px solid red';
+                document.getElementById('a5').disabled = true;
+            }
+            document.getElementById("resultVal").innerHTML = 'У вас ' + count + '/5 баллов';
+        }
+    </script>
+    <h1 id="resultVal"></h1>
+    <button onclick="Check()" id="ResultBtn">Проверить</button>
+    <button onclick="window.location.reload()" id="RestartBtn">Начать заново</button>
+    <p>
+        Панков Сергей
+    </p>
+
+</body>
+</html>
